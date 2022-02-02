@@ -15,7 +15,6 @@
   	<link rel="stylesheet" href="/assets/res/bootstrap-icons-1.7.2/bootstrap-icons.css">
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script	script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-	<script src="assets/js/math.js"></script>
 	<style>
 	.icons {
 		display: grid;
@@ -83,27 +82,21 @@
 	<!-- Game Pin Form -->
 	<div class="container bg-light col-9 col-md-4 d-flex justify-content-center mt-5 border border-5 border-secondary rounded-3">
 		<form class="col-8 col-md-6 mt-5">
-			<h1 class="h3 mb-3 fw-normal text-center">Indtast login for at fortsætte</h1>
+			<h1 class="h3 mb-3 fw-normal text-center" id="textSolve">Vælg mængde af Regnestykker</h1>
 		
-			<div class="form-floating" action="/start" method="post">
-				<input type="text" class="form-control" id="gamepin" placeholder="0">
-				<label for="gamepin">Spil Kode</label>
-			</div>
+			<label for="customRange2" class="form-label" id="amount">Vælg mængde: </label>
+			<input type="range" class="form-range" min="5" max="30" step="5" id="rangeSlider">
 			<div class="form-floating mt-2 mb-2 d-flex row-cols-3">
-				<div class="form-floating col-3">
-					<input type="text" class="form-control" id="userid" placeholder="0">
-					<label for="userid">ID</label>
-				</div>
-				<span class="input-group-text col-2">-</span>
-				<div class="form-floating col-7">
-					<input type="password" class="form-control" id="userpass" placeholder="0">
-					<label for="userpass">Kode</label>
+				<div class="form-floating w-100">
+					<input type="text" class="form-control checkfield" id="chkfld" placeholder="0">
+					<label class="checkfield">Løs Ligningen</label>
 				</div>
 			</div>
 		
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Tilslut</button>
+			<a class="w-100 btn btn-lg btn-primary" id="checkbtn" onclick="checkAns(); return false;">Start</a>
 			<p class="mt-5 mb-3 text-muted">© 2022–2022 OEG</p>
 		</form>
 	</div>
 </body>
+<script src="assets/js/math.js"></script>
 </html>
