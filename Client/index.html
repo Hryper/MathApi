@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Semimatik</title>
+	<script src="/assets/js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="/assets/res/bootstrap-icons-1.7.2/bootstrap-icons.css">
+	<style>
+	.icons {
+		display: grid;
+		max-width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+		gap: 1.25rem;
+	}
+	.icon {
+		background-color: var(--bs-light);
+		border-radius: .25rem;
+	}
+	.bi {
+		margin: .25rem;
+		font-size: 2.5rem;
+	}
+	.label {
+		font-family: var(--bs-font-monospace);
+	}
+	.label {
+		display: inline-block;
+		width: 100%;
+		overflow: hidden;
+		padding: .25rem;
+		font-size: .625rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	body {
+		background-image: url('bg.jpg');
+		background-size: 100% auto;
+	}
+	</style>
+</head>
+	
+<body>
+	<!-- <div class="icon">
+		<i class="bi bi-trash-fill"></i>
+		<div class="label">TestIcon</div>
+	</div> -->
+	<header class="p-3 bg-dark text-white">
+		<div class="container">
+		  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+				<i class="bi bi-infinity me-5 d-none d-lg-block"></i>
+			</a>
+	
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+			  <li><a href="" class="btn btn-lg btn-primary me-3 d-none d-md-block">Hjem</a></li>
+			  <li><a href="" class="btn btn-lg btn-outline-light me-3 d-none d-md-block">Skab</a></li>
+			  <li><a href="" class="btn btn-lg btn-outline-light me-3 d-none d-md-block">Hjælp</a></li>
+			  <li><a href="" class="btn btn-lg btn-outline-light d-none d-md-block">Om os</a></li>
+			</ul>
+	
+			<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+			  <input type="search" class="form-control  form-control-dark d-none d-md-block" placeholder="Søg I Skabeloner..." aria-label="Search">
+			</form>
+	
+			<div class="text-end d-flex mx-auto justify-content-center">
+			  <button type="button" class="btn btn-lg btn-outline-light me-3 col-10 col-md-6">Login</button>
+			  <button type="button" class="btn btn-lg btn-outline-warning col-10 col-md-6">Tilmeld</button>
+			</div>
+		  </div>
+		</div>
+	</header>
+	<!-- Game Pin Form -->
+	<div class="container bg-light col-9 col-md-4 d-flex justify-content-center mt-5 border border-5 border-secondary rounded-3">
+		<form class="col-8 col-md-6 mt-5">
+			<h1 class="h3 mb-3 fw-normal text-center">Indtast login for at fortsætte</h1>
+		
+			<div class="form-floating">
+				<input type="text" class="form-control" id="gamepin" placeholder="0">
+				<label for="gamepin">Spil Kode</label>
+			</div>
+			<div class="form-floating mt-2 mb-2 d-flex row-cols-3">
+				<div class="form-floating col-3">
+					<input type="text" class="form-control" id="userid" placeholder="0">
+					<label for="userid">ID</label>
+				</div>
+				<span class="input-group-text col-2">-</span>
+				<div class="form-floating col-7">
+					<input type="password" class="form-control" id="userpass" placeholder="0">
+					<label for="userpass">Kode</label>
+				</div>
+			</div>
+		
+			<button class="w-100 btn btn-lg btn-primary" type="submit">Tilslut</button>
+			<p class="mt-5 mb-3 text-muted">© 2022–2022 OEG</p>
+		</form>
+	</div>
+</body>
+</html>
