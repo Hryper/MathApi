@@ -15,40 +15,8 @@
   	<link rel="stylesheet" href="/assets/res/bootstrap-icons-1.7.2/bootstrap-icons.css">
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script	script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-	<style>
-	.icons {
-		display: grid;
-		max-width: 100%;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
-		gap: 1.25rem;
-	}
-	.icon {
-		background-color: var(--bs-light);
-		border-radius: .25rem;
-	}
-	.bi {
-		margin: .25rem;
-		font-size: 2.5rem;
-	}
-	.label {
-		font-family: var(--bs-font-monospace);
-	}
-	.label {
-		display: inline-block;
-		width: 100%;
-		overflow: hidden;
-		padding: .25rem;
-		font-size: .625rem;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	body {
-		background-image: url('bg.jpg');
-		background-size: 100% auto;
-	}
-	</style>
+	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
-	
 <body>
 	<!-- <div class="icon">
 		<i class="bi bi-trash-fill"></i>
@@ -81,21 +49,23 @@
 	</header>
 	<!-- Game Pin Form -->
 	<div class="container bg-light col-9 col-md-4 d-flex justify-content-center mt-5 border border-5 border-secondary rounded-3">
-		<form class="col-8 col-md-6 mt-5">
+		<div class="col-8 col-md-6 mt-5">
 			<h1 class="h3 mb-3 fw-normal text-center" id="textSolve">Vælg mængde af Regnestykker</h1>
 		
 			<label for="customRange2" class="form-label" id="amount">Vælg mængde: </label>
 			<input type="range" class="form-range" min="5" max="30" step="5" id="rangeSlider">
 			<div class="form-floating mt-2 mb-2 d-flex row-cols-3">
 				<div class="form-floating w-100">
-					<input type="text" class="form-control checkfield" id="chkfld" placeholder="0">
+					<input type="text" autocomplete="off" class="form-control checkfield" id="chkfld" onkeydown="if(event.key==='Enter') {checkAns();}; console.log(event.key)">
 					<label class="checkfield">Løs Ligningen</label>
 				</div>
 			</div>
-		
-			<a class="w-100 btn btn-lg btn-primary" id="checkbtn" onclick="checkAns(); return false;">Start</a>
-			<p class="mt-5 mb-3 text-muted">© 2022–2022 OEG</p>
-		</form>
+			<div class="rsltbtns">
+				<a class="w-100 btn btn-lg btn-primary" id="checkbtn" onclick="checkAns(); return false;">Start</a>
+				<a class="w-100 btn btn-lg btn-outline-success mt-2" id="rsltld" onclick="checkRslt(); return false;">Check Resultater</a>
+			</div>
+			<p class="mt-5 mb-3 text-muted" id="crctcnt">© 2022–2022 OEG</p>
+		</div>
 	</div>
 </body>
 <script src="assets/js/math.js"></script>
